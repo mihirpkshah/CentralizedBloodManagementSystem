@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800" height="1800" viewBox="0 0 800 1800" xmlns="http://www.w3.org/2000/svg" font-family="Inter,Segoe UI,Roboto,Arial,sans-serif">
+  <defs>
+    <!-- Arrowhead -->
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="10" markerHeight="10" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#333"/>
+    </marker>
+    <!-- Shadows -->
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#000" flood-opacity="0.15"/>
+    </filter>
+    <!-- Styles -->
+    <style>
+      .title { font-weight: 700; font-size: 22px; fill: #0f172a; }
+      .label { font-weight: 600; font-size: 16px; fill: #0f172a; }
+      .small { font-size: 14px; fill: #334155; }
+      .box { fill: #ffffff; stroke: #cbd5e1; stroke-width: 1.5; rx: 12; }
+      .group { fill: #f8fafc; stroke: #e2e8f0; stroke-width: 1.5; rx: 14; }
+      .ai { fill: #eef2ff; stroke: #c7d2fe; }
+      .accent { fill: #ecfeff; stroke: #a5f3fc; }
+      .line { stroke: #333; stroke-width: 2; marker-end: url(#arrow); fill: none; }
+      .dash { stroke-dasharray: 6 6; }
+    </style>
+  </defs>
+
+  <!-- Diagram title -->
+  <text x="400" y="40" text-anchor="middle" class="title">Blood Bank Management System — Workflow</text>
+
+  <!-- Donor -->
+  <g transform="translate(100,80)">
+    <rect class="group" width="600" height="200" filter="url(#shadow)"/>
+    <text x="20" y="34" class="label">Donor</text>
+    <rect x="20" y="60" width="560" height="40" class="box" filter="url(#shadow)"/>
+    <text x="40" y="85" class="small">Browse blood banks, timings, venues</text>
+    <rect x="20" y="110" width="560" height="40" class="box" filter="url(#shadow)"/>
+    <text x="40" y="135" class="small">Register for donation / camps</text>
+    <rect x="20" y="160" width="560" height="40" class="box accent" filter="url(#shadow)"/>
+    <text x="40" y="185" class="small">Standby Donor: login &amp; opt-in</text>
+  </g>
+
+  <!-- Arrow -->
+  <path class="line" d="M400 280 L400 320"/>
+
+  <!-- Blood Bank -->
+  <g transform="translate(100,320)">
+    <rect class="group" width="600" height="250" filter="url(#shadow)"/>
+    <text x="20" y="34" class="label">Blood Bank (Secure Login)</text>
+    <rect x="20" y="60" width="560" height="40" class="box" filter="url(#shadow)"/>
+    <text x="40" y="85" class="small">List donation camps &amp; openings</text>
+    <rect x="20" y="110" width="560" height="60" class="box" filter="url(#shadow)"/>
+    <text x="40" y="135" class="small">Inventory Management: blood group, expiry, qty</text>
+    <rect x="20" y="180" width="560" height="60" class="box" filter="url(#shadow)"/>
+    <text x="40" y="205" class="small">Profile &amp; Dashboard with stock, usage, AI insights</text>
+  </g>
+
+  <!-- Arrow -->
+  <path class="line" d="M400 570 L400 610"/>
+
+  <!-- Hospitals -->
+  <g transform="translate(100,610)">
+    <rect class="group" width="600" height="200" filter="url(#shadow)"/>
+    <text x="20" y="34" class="label">Hospitals / Recipients</text>
+    <rect x="20" y="60" width="560" height="50" class="box" filter="url(#shadow)"/>
+    <text x="40" y="90" class="small">Search / Filter / Sort (group, location, expiry, components)</text>
+    <rect x="20" y="120" width="560" height="40" class="box" filter="url(#shadow)"/>
+    <text x="40" y="145" class="small">Request blood from bank</text>
+  </g>
+
+  <!-- Arrow -->
+  <path class="line" d="M400 810 L400 850"/>
+
+  <!-- Standby Donors -->
+  <g transform="translate(100,850)">
+    <rect class="group" width="600" height="150" filter="url(#shadow)"/>
+    <text x="20" y="34" class="label">Standby Donors</text>
+    <rect x="20" y="60" width="560" height="40" class="box accent" filter="url(#shadow)"/>
+    <text x="40" y="85" class="small">Receive urgent alerts from hospitals</text>
+    <rect x="20" y="110" width="560" height="30" class="box" filter="url(#shadow)"/>
+    <text x="40" y="130" class="small">Respond / contact hospital</text>
+  </g>
+
+  <!-- Arrow -->
+  <path class="line" d="M400 1000 L400 1040"/>
+
+  <!-- AI Module -->
+  <g transform="translate(100,1040)">
+    <rect class="group ai" width="600" height="150" filter="url(#shadow)"/>
+    <text x="20" y="34" class="label">AI / Analytics Module</text>
+    <rect x="20" y="60" width="560" height="40" class="box ai" filter="url(#shadow)"/>
+    <text x="40" y="85" class="small">Demand forecasting (group, region, season)</text>
+    <rect x="20" y="110" width="560" height="40" class="box ai" filter="url(#shadow)"/>
+    <text x="40" y="135" class="small">Recommend donation drive schedule</text>
+  </g>
+
+  <!-- Footer -->
+  <g transform="translate(100,1240)">
+    <rect class="group" width="600" height="60" filter="url(#shadow)"/>
+    <text x="40" y="36" class="small">
+      Tech Stack: React · Node.js · SQL · Auth · Notifications · Role-based Access
+    </text>
+  </g>
+</svg>
